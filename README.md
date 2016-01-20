@@ -3,7 +3,7 @@
 Small gem to convert ruby Time, Date, and DateTime instances to Excel date integers. This is helpful when using some Excel parsers to compare the dates in the spreadsheet to dates you may be using elsewhere in the script. 
 
 # Usage
-Simple! Require the gem `require 'to_xl', initialize a Time, Date or DateTime value. Call `.to_xl` on it.
+Simple! Require the gem `require 'to_xl'`, initialize a Time, Date or DateTime value. Call `.to_xl` on it.
 
 # Example
 ```ruby
