@@ -1,6 +1,6 @@
-require 'time' unless defined? Time 
-require 'date' unless defined? Date 
-require 'datetime' unless defined? DateTime
+require 'float' unless defined? Float
+require 'Integer' unless defined? Integer 
+require 'Fixnum' unless defined? Fixnum
 
 class Float
 
@@ -16,23 +16,23 @@ class Float
 
 end
 
-
-class Integer
-
-  def from_excel
-    self.to_f.from_excel
-  end
-  alias_method :from_xl, :from_excel
-
-end
-
-
-class Fixnum
-
+if defined?(Integer)
+  class Integer
     def from_excel
       self.to_f.from_excel
     end
     alias_method :from_xl, :from_excel
+
+  end
+end
+
+if defined?(Fixnum)
+  class Fixnum
+      def from_excel
+        self.to_f.from_excel
+      end
+      alias_method :from_xl, :from_excel
+  end
 end
 
 

@@ -1,4 +1,6 @@
 require 'time'
+gem_dir = Gem::Specification.find_by_name("to_xl").gem_dir
+load "#{gem_dir}/lib/from_xl.rb"
 
 class Time
 
@@ -11,6 +13,10 @@ class Time
     excel_date
   end
   alias_method :to_xl, :to_excel
+
+  def say_hi
+    puts "Hello there"
+  end
 
 end
 
@@ -37,4 +43,3 @@ if defined?(DateTime)
     
   end
 end
-

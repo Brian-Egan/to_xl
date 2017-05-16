@@ -18,3 +18,6 @@ irb(main):005:0> DateTime.now.to_xl
 ```
 ##### That result in Excel:
 ![The above integer in Excel (and formated)](http://i.imgur.com/LcUIWro.png "In Excel")
+
+### from_xl
+You can also convert a date integer or float taken from Excel into a Ruby Time object. Simply call `from_excel`
