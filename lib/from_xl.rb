@@ -17,26 +17,22 @@ class Float
 end
 
 
-# if defined?(Date)
-  class Integer
+class Integer
+
+  def from_excel
+    self.to_f.from_excel
+  end
+  alias_method :from_xl, :from_excel
+
+end
+
+
+class Fixnum
 
     def from_excel
       self.to_f.from_excel
     end
     alias_method :from_xl, :from_excel
+end
 
-  end
-# end
-
-
-# if defined?(DateTime)
-  class Fixnum
-
-    def from_excel
-      self.to_f.from_excel
-    end
-    alias_method :from_xl, :from_excel
-    
-  end
-# end
 
